@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Score({ points, onStart }) {
+  const navigate = useNavigate();
+
   return (
     <div className="game-not-started">
       <h2>Punteggio: {points}</h2>
@@ -8,9 +10,9 @@ export default function Score({ points, onStart }) {
         <button className="btn" onClick={onStart}>
           Gioca ancora
         </button>
-        <Link to="/" className="link-prop">
-          <button className="btn">Menu principale</button>
-        </Link>
+        <button className="btn" onClick={() => navigate("/")}>
+          Menu principale
+        </button>
       </div>
     </div>
   );

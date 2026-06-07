@@ -13,7 +13,7 @@ export default function CardGame({ imgGame, title, desc, link, btnColor = "#FFD2
             <p className="card-desc">{desc}</p>
           </div>
         </div>
-        <button className="btn" style={{ backgroundColor: btnColor, gap: "10px" }}>
+        <button className="" style={{ backgroundColor: btnColor, gap: "10px" }}>
           <i class="fa-solid fa-play" style={{ fontSize: "12px" }}></i> Gioca
         </button>
       </div>

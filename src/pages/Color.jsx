@@ -18,17 +18,17 @@ export default function Color() {
   ];
 
   const colors = [
-    { colorName: "White", colorValue: "#FFFFFF" },
-    { colorName: "Black", colorValue: "#000000" },
-    { colorName: "Red", colorValue: "#FF0000" },
-    { colorName: "Green", colorValue: "#00FF00" },
-    { colorName: "Blue", colorValue: "#0000FF" },
-    { colorName: "Yellow", colorValue: "#FFFF00" },
-    { colorName: "Orange", colorValue: "#FFA500" },
-    { colorName: "Purple", colorValue: "#800080" },
-    { colorName: "Pink", colorValue: "#FFC0CB" },
-    { colorName: "Gray", colorValue: "#808080" },
-    { colorName: "Cyan", colorValue: "#00FFFF" },
+    { colorName: "Bianco", colorValue: "#FFFFFF" },
+    { colorName: "Nero", colorValue: "#000000" },
+    { colorName: "Rosso", colorValue: "#FF0000" },
+    { colorName: "Verde", colorValue: "#00FF00" },
+    { colorName: "Blu", colorValue: "#0000FF" },
+    { colorName: "Giallo", colorValue: "#FFFF00" },
+    { colorName: "Arancione", colorValue: "#FFA500" },
+    { colorName: "Viola", colorValue: "#800080" },
+    { colorName: "Rosa", colorValue: "#FFC0CB" },
+    { colorName: "Grigio", colorValue: "#808080" },
+    { colorName: "Azzurro", colorValue: "#00FFFF" },
     { colorName: "Magenta", colorValue: "#FF00FF" },
   ];
 
@@ -90,13 +90,15 @@ export default function Color() {
 
   return (
     <>
-      <div className="container-color" style={{ backgroundColor: bgColor }}>
+      <div className="container-color" style={{ backgroundColor: "#f4fafd" }}>
         {start && first ? (
           <StartComponent title="Color Game" onStart={handleStart} />
         ) : !start ? (
           <div>
-            <div className="points">Score: {points}</div>
-            <Timer onTimeOver={handleTimerOver} />
+            <div className="game-header">
+              <Timer onTimeOver={handleTimerOver} />
+              <div className="points">Score: {points}</div>
+            </div>
             <div className="game-container">
               <h2>{color}</h2>
               <div className="buttons-container">

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 export default function Timer({ onTimeOver}) {
 
-    const [time, setTime] = useState(50);
+    const [time, setTime] = useState(30);
 
     useEffect(() => {
         if (time <= 0){
