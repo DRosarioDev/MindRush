@@ -361,6 +361,7 @@ header {
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   width: 400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -606,6 +607,7 @@ footer {
   /* Memory Game */
   .memory-game {
     gap: 10px;
+    width: 60vw;
     padding: 20px;
   }
 
@@ -658,7 +660,7 @@ footer {
   }
 
   .game-container {
-    width: 92vw;
+    width: 95vw;
     padding: 25px 15px;
   }
 
@@ -682,6 +684,7 @@ footer {
 
   .memory-game {
     gap: 8px;
+    width: 75vw;
     padding: 15px;
   }
 
