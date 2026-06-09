@@ -149,7 +149,6 @@ Looking for something to work on? Here are some open ideas:
 
 | Area | Idea |
 |------|------|
-| 🆕 New game | Memory card flip game |
 | 🆕 New game | Flag guessing game |
 | 🆕 New game | Greater / Less than number comparison |
 | 🆕 New game | Emoji meaning quiz |
