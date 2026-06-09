@@ -352,6 +352,62 @@ header {
 }
 
 /*  ==========================================
+    Memory Game
+    ==========================================   
+*/
+
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.card-memory-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-width: 3px 6px 6px 3px;
+  border-color: #000;
+  border-style: solid;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  transition: transform 0.15s;
+  user-select: none;
+}
+
+.card-memory-game p {
+  margin: 0;
+  text-align: center;
+  visibility: hidden;
+}
+
+.card-memory-game:hover {
+  transform: scale(1.05);
+}
+
+.card-memory-game.flipped p {
+  visibility: visible;
+}
+
+.card-memory-game.flipped:hover {
+  transform: none;
+  cursor: default;
+}
+
+.card-memory-game.matched {
+  visibility: hidden;
+  cursor: default;
+  pointer-events: none;
+}
+
+/*  ==========================================
     Score
     ==========================================   
 */
@@ -547,6 +603,17 @@ footer {
     min-height: 90px;
   }
 
+  /* Memory Game */
+  .memory-game {
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .card-memory-game {
+    font-size: 12px;
+    border-radius: 10px;
+  }
+
   /* Score */
   .game-not-started {
     padding: 30px 20px;
@@ -611,5 +678,14 @@ footer {
   .buttons-container .btn-color {
     width: 100%;
     height: 90px;
+  }
+
+  .memory-game {
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .card-memory-game {
+    font-size: 10px;
   }
 }

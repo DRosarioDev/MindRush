@@ -1,7 +1,9 @@
 import CardGame from "../components/CardGame";
-import mascotte from '../assets/mascotte.png'
-import mathGame from '../assets/math_game.png'
-import colorGame from '../assets/color_game.png'
+import mascotte from "../assets/mascotte.png";
+import mathGame from "../assets/math_game.png";
+import colorGame from "../assets/color_game.png";
+import memoryGame from "../assets/memory_game.png"
+
 export default function Home() {
   return (
     <>
@@ -33,6 +35,13 @@ export default function Home() {
             desc="Riconosci il colore giusto prima che il tempo finisca."
             link="/color"
             btnColor="#A8E6CF"
+          />
+          <CardGame
+            imgGame={memoryGame}
+            title="Memory game"
+            desc="Trova la coppia di colori corretta"
+            link="/memory"
+            btnColor="#86bfff"
           />
         </div>
       </section>

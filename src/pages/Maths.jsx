@@ -4,20 +4,20 @@ import Timer from "../components/Timer";
 import Score from "../components/Score";
 
 export default function Maths() {
-  const selectedColor = [
-    "#B0C4DE",
-    "9DC183",
-    "#E6E6FA",
-    "#F5F5DC",
-    "#D3D3D3",
-    "#AFEEEE",
-    "#FFE5B4",
-    "#caffcaff",
-    "#87CEEB",
-    "#FFFDD0",
-  ];
+  // const selectedColor = [
+  //   "#B0C4DE",
+  //   "9DC183",
+  //   "#E6E6FA",
+  //   "#F5F5DC",
+  //   "#D3D3D3",
+  //   "#AFEEEE",
+  //   "#FFE5B4",
+  //   "#caffcaff",
+  //   "#87CEEB",
+  //   "#FFFDD0",
+  // ];
 
-  const [bgColor, setBgColor] = useState(selectedColor[0]);
+  //const [bgColor, setBgColor] = useState(selectedColor[0]);
   const [calculus, setCalculus] = useState("0 + 0");
   const [textBtn1, setTextBtn1] = useState("0");
   const [textBtn2, setTextBtn2] = useState("0");
@@ -26,11 +26,11 @@ export default function Maths() {
   const [start, setStart] = useState(true);
   const [first, setFirst] = useState(true);
 
-  const changeColor = () => {
-    const nuovoColore =
-      selectedColor[Math.floor(Math.random() * selectedColor.length)];
-    setBgColor(nuovoColore);
-  };
+  // const changeColor = () => {
+  //   const nuovoColore =
+  //     selectedColor[Math.floor(Math.random() * selectedColor.length)];
+  //   setBgColor(nuovoColore);
+  // };
 
   const changeOperation = () => {
     const operations = ["+", "-", "*", "/"];
@@ -63,7 +63,7 @@ export default function Maths() {
   };
 
   const handleStart = () => {
-    changeColor();
+    //changeColor();
     changeOperation();
     setPoints(0);
     setStart(false);
@@ -94,7 +94,7 @@ export default function Maths() {
                   value={textBtn1}
                   className="btn"
                   onClick={(e) => {
-                    changeColor();
+                    //changeColor();
                     changeOperation();
                     handleClick(e);
                   }}
@@ -105,7 +105,7 @@ export default function Maths() {
                   value={textBtn2}
                   className="btn"
                   onClick={(e) => {
-                    changeColor();
+                    //changeColor();
                     changeOperation();
                     handleClick(e);
                   }}
@@ -116,7 +116,7 @@ export default function Maths() {
             </div>
           </div>
         ) : (
-          <Score points={points} onStart={handleStart} />
+          <Score points={null} isPoint={true} onStart={handleStart} />
         )}
       </div>
     </>

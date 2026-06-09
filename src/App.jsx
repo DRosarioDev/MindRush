@@ -7,6 +7,7 @@ import Maths from './pages/Maths';
 import Help from './pages/Help';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MemoryGame from './pages/MemoryGame';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/color" element={<Color />} />
             <Route path="/math" element={<Maths />} />
             <Route path="/aiuto" element={<Help />} />
+            <Route path="/memory" element={<MemoryGame />} />
           </Routes>
           <Footer />
       </NotificationProvider>

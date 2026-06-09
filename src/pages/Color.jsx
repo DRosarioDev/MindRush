@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import StartComponent from "../components/StartComponent";
 import Timer from "../components/Timer";
@@ -37,9 +38,9 @@ export default function Color() {
   const [start, setStart] = useState(true);
   const [first, setFirst] = useState(true);
   const [bgColor, setBgColor] = useState(selectedBgColor[0]);
-  const [color, setColour] = useState(
-    Math.floor(Math.random() * colors.length),
-  );
+  const [color, setColour] = useState(() => {
+    Math.floor(Math.random() * colors.length);
+  });
   const [textBtn1, setTextBtn1] = useState("White");
   const [textBtn2, setTextBtn2] = useState("Blue");
 
@@ -50,8 +51,7 @@ export default function Color() {
   };
 
   const changeOperation = () => {
-    const newColor =
-      colors[Math.floor(Math.random() * colors.length)].colorName;
+    const newColor = colors[Math.floor(Math.random() * colors.length)].colorName;
     let newIDColor = colors.findIndex((c) => c.colorName === newColor);
     newIDColor = colors[newIDColor].colorValue;
     setColour(newColor);
